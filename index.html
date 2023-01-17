@@ -12,6 +12,25 @@
       list-style: none;
     }
 
+    #imagen {
+      height: 200px;
+      width: 400px;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width:70vw;
+    }
     
     .arriba {
       transform: scale(1.2);
@@ -30,22 +49,22 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
   <div class="text-center">
     <map name="mapa" class="figuras">
-      <area shape="circle" coords="40,100,15" href=""  />
-      <area shape="circle" coords="90,100,15" href="" />
-      <area shape="rectangle" coords="150,50,230,130" href="" />
-      <area shape="rectangle" coords="270,50,390,150" href="" />
-      <area shape="rectangle" coords="400,100,490,160" href="" />
-      <area shape="circle" coords="510,140,20" href="" />
-      <area shape="circle" coords="550,130,20" href="" />
-      <area shape="circle" coords="580,140,20" href="" />
-      <area shape="circle" coords="620,160,20" href="" />
-      <area shape="circle" coords="660,170,15" href="" />
-      <area shape="circle" coords="695,170,15" href="" />
-      <area shape="circle" coords="750,180,30" href="" />
-      <area shape="circle" coords="800,190,15" href="" />
-      <area shape="rectangle" coords="825,175,925,215" href="" />
-      <area shape="rectangle" coords="950,175,1155,255" href="" />
-      <area shape="rectangle" coords="1180,125,1450,255" href="" />
+      <area shape="circle" coords="40,100,15" href="#" onmouseover="mostrarCiudad(0)"  />
+      <area shape="circle" coords="90,100,15" href="#" onmouseover="mostrarCiudad(1)" />
+      <area shape="rectangle" coords="150,50,230,130" href="#" onmouseover="mostrarCiudad(2)" />
+      <area shape="rectangle" coords="270,50,390,150" href="#" onmouseover="mostrarCiudad(3)" />
+      <area shape="rectangle" coords="400,100,490,160" href="#" onmouseover="mostrarCiudad(4)" />
+      <area shape="circle" coords="510,140,20" href="#" onmouseover="mostrarCiudad(5)" />
+      <area shape="circle" coords="550,130,20" href="#" onmouseover="mostrarCiudad(6)" />
+      <area shape="circle" coords="580,140,20" href="#" onmouseover="mostrarCiudad(7)" />
+      <area shape="circle" coords="620,160,20" href="#" onmouseover="mostrarCiudad(8)" />
+      <area shape="circle" coords="660,170,15" href="#" onmouseover="mostrarCiudad(9)"  />
+      <area shape="circle" coords="695,170,15" href="#" onmouseover="mostrarCiudad(10)"  />
+      <area shape="circle" coords="750,180,30" href="#" onmouseover="mostrarCiudad(11)"  />
+      <area shape="circle" coords="800,190,15" href="#" onmouseover="mostrarCiudad(12)"  />
+      <area shape="rectangle" coords="825,175,925,215" href="#" onmouseover="mostrarCiudad(13)"  />
+      <area shape="rectangle" coords="950,175,1155,255" href="#" onmouseover="mostrarCiudad(14)"  />
+      <area shape="rectangle" coords="1180,125,1450,255" href="#" onmouseover="mostrarCiudad(15)"  />
     </map>
     </map>
     <img src="https://aprotur.cl/wp-content/uploads/2020/07/sur.png" usemap="#mapa" >
@@ -56,7 +75,7 @@
   <div class="container text-center">
 
     <div class="card">
-      <img src="..." class="card-img-top shadow" alt="...">
+      <img id="imagen" src="" class="card-img-top shadow" alt="...">
       <div class="card-body">
         <h5 class="card-title">Región:</h5>
         <p class="card-text" id="atractivos">Atractivos: </p>
@@ -69,7 +88,32 @@
 </body>
 
 
+<script>
+  function mostrarCiudad(opcion){
+    switch (opcion) {
+      case 0: 
+      document.getElementById("imagen").src="img/Morro-de-Arica.jpg";
+      document.querySelector(".card-title").innerHTML=("Morro de Arica");
+      document.querySelector(".card-text").innerHTML=("El morro de Arica es el sitio más representativo de la región.");
+      break;
+      case 1:
+      document.getElementById("imagen").src="img/gigante-de-tarapaca.webp";
+      document.querySelector(".card-title").innerHTML=("El Gigante de Tarapacá");
+      document.querySelector(".card-text").innerHTML=("El gigante de Tarapacá es un sitio histórico de interesante procedencia ubicado en pleno desierto.");
+      break;
+      case 2:
+    }
+  }
 
+  function ocultarCiudad(opcion){
+    switch (opcion) {
+      case 0:
+      document.getElementById("imagen").src="";
+    }
+  }
+  
+  
+</script>
 
 <script>
   $("area").hover(function () {
