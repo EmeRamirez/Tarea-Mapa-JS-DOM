@@ -1,0 +1,73 @@
+#figuras {
+  list-style: none;
+}
+
+#imagen {
+  height: 200px;
+  width: 400px;
+  align-items: center;
+  padding-top: 2vw;
+  border-radius: 5px;
+  border-top-left-radius: 15px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.card {
+  display: flex;
+  color: antiquewhite;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35vw;
+  border-color: black;
+  background: #000000;
+  background: -moz-linear-gradient(left, #000000 0%, #565656 52%, #000000 100%);
+  background: -webkit-linear-gradient(left, #000000 0%, #565656 52%, #000000 100%);
+  background: linear-gradient(to right, #000000 0%, #565656 52%, #000000 100%);
+}
+
+.card-text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arriba {
+  transform: scale(1.2);
+}
+
+.abajo {
+  transform: scale(0.8);
+}
+
+.borde {
+  border: 1px solid red;
+}
+
+#cont-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2vw;
+}
+
+#boton-ocul {
+  background-color: rgb(99, 99, 226);
+  color: aliceblue;
+}
+
+/* Esta es la clase con la cual se despliega el efecto de transición */
+.oculto {
+  opacity:0;
+}
+
+#contenedor-carta {
+  transition: all 0.7s;
+}
+

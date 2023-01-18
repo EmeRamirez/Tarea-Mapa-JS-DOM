@@ -16,6 +16,9 @@
       height: 200px;
       width: 400px;
       align-items: center;
+      padding-top: 2vw;
+      border-radius: 5px;
+      border-top-left-radius: 15px;
     }
 
     .container {
@@ -26,12 +29,25 @@
 
     .card {
       display: flex;
+      color: antiquewhite;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width:70vw;
+      width: 35vw;
+      border-color: black;
+      background: #000000;
+      background: -moz-linear-gradient(left, #000000 0%, #565656 52%, #000000 100%);
+      background: -webkit-linear-gradient(left, #000000 0%, #565656 52%, #000000 100%);
+      background: linear-gradient(to right, #000000 0%, #565656 52%, #000000 100%);
     }
-    
+
+    .card-text {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     .arriba {
       transform: scale(1.2);
     }
@@ -39,9 +55,33 @@
     .abajo {
       transform: scale(0.8);
     }
-    .borde{
+
+    .borde {
       border: 1px solid red;
     }
+
+    #cont-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 2vw;
+    }
+
+    #boton-ocul {
+      background-color: rgb(99, 99, 226);
+      color: aliceblue;
+    }
+
+    .oculto {
+      opacity:0;
+    }
+
+    #contenedor-carta {
+      transition: all 0.7s;
+    }
+    
+
+
   </style>
 </head>
 
@@ -49,7 +89,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
   <div class="text-center">
     <map name="mapa" class="figuras">
-      <area shape="circle" coords="40,100,15" href="#" onmouseover="mostrarCiudad(0)"  />
+      <area shape="circle" coords="40,100,15" href="#" onmouseover="mostrarCiudad(0)" />
       <area shape="circle" coords="90,100,15" href="#" onmouseover="mostrarCiudad(1)" />
       <area shape="rectangle" coords="150,50,230,130" href="#" onmouseover="mostrarCiudad(2)" />
       <area shape="rectangle" coords="270,50,390,150" href="#" onmouseover="mostrarCiudad(3)" />
@@ -58,21 +98,23 @@
       <area shape="circle" coords="550,130,20" href="#" onmouseover="mostrarCiudad(6)" />
       <area shape="circle" coords="580,140,20" href="#" onmouseover="mostrarCiudad(7)" />
       <area shape="circle" coords="620,160,20" href="#" onmouseover="mostrarCiudad(8)" />
-      <area shape="circle" coords="660,170,15" href="#" onmouseover="mostrarCiudad(9)"  />
-      <area shape="circle" coords="695,170,15" href="#" onmouseover="mostrarCiudad(10)"  />
-      <area shape="circle" coords="750,180,30" href="#" onmouseover="mostrarCiudad(11)"  />
-      <area shape="circle" coords="800,190,15" href="#" onmouseover="mostrarCiudad(12)"  />
-      <area shape="rectangle" coords="825,175,925,215" href="#" onmouseover="mostrarCiudad(13)"  />
-      <area shape="rectangle" coords="950,175,1155,255" href="#" onmouseover="mostrarCiudad(14)"  />
-      <area shape="rectangle" coords="1180,125,1450,255" href="#" onmouseover="mostrarCiudad(15)"  />
+      <area shape="circle" coords="660,170,15" href="#" onmouseover="mostrarCiudad(9)" />
+      <area shape="circle" coords="695,170,15" href="#" onmouseover="mostrarCiudad(10)" />
+      <area shape="circle" coords="750,180,30" href="#" onmouseover="mostrarCiudad(11)" />
+      <area shape="circle" coords="800,190,15" href="#" onmouseover="mostrarCiudad(12)" />
+      <area shape="rectangle" coords="825,175,925,215" href="#" onmouseover="mostrarCiudad(13)" />
+      <area shape="rectangle" coords="950,175,1155,255" href="#" onmouseover="mostrarCiudad(14)" />
+      <area shape="rectangle" coords="1180,125,1450,255" href="#" onmouseover="mostrarCiudad(15)" />
     </map>
     </map>
-    <img src="https://aprotur.cl/wp-content/uploads/2020/07/sur.png" usemap="#mapa" >
+    <img src="https://aprotur.cl/wp-content/uploads/2020/07/sur.png" usemap="#mapa">
   </div>
 
+  <div id="cont-btn">
+    <button id="boton-ocul" onclick="ocultarCiudad()">Ocultar</button>
+  </div>
 
-
-  <div class="container text-center">
+  <div class="container text-center oculto" id="contenedor-carta">
 
     <div class="card">
       <img id="imagen" src="" class="card-img-top shadow" alt="...">
@@ -88,32 +130,8 @@
 </body>
 
 
-<script>
-  function mostrarCiudad(opcion){
-    switch (opcion) {
-      case 0: 
-      document.getElementById("imagen").src="img/Morro-de-Arica.jpg";
-      document.querySelector(".card-title").innerHTML=("Morro de Arica");
-      document.querySelector(".card-text").innerHTML=("El morro de Arica es el sitio más representativo de la región.");
-      break;
-      case 1:
-      document.getElementById("imagen").src="img/gigante-de-tarapaca.webp";
-      document.querySelector(".card-title").innerHTML=("El Gigante de Tarapacá");
-      document.querySelector(".card-text").innerHTML=("El gigante de Tarapacá es un sitio histórico de interesante procedencia ubicado en pleno desierto.");
-      break;
-      case 2:
-    }
-  }
+<script src="main.js"></script>
 
-  function ocultarCiudad(opcion){
-    switch (opcion) {
-      case 0:
-      document.getElementById("imagen").src="";
-    }
-  }
-  
-  
-</script>
 
 <script>
   $("area").hover(function () {
