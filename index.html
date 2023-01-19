@@ -7,82 +7,8 @@
   <title>M3 - ABP AE1</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <style>
-    #figuras {
-      list-style: none;
-    }
-
-    #imagen {
-      height: 200px;
-      width: 400px;
-      align-items: center;
-      padding-top: 2vw;
-      border-radius: 5px;
-      border-top-left-radius: 15px;
-    }
-
-    .container {
-      display: flex;
-      justify-content: center;
-
-    }
-
-    .card {
-      display: flex;
-      color: antiquewhite;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 35vw;
-      border-color: black;
-      background: #000000;
-      background: -moz-linear-gradient(left, #000000 0%, #565656 52%, #000000 100%);
-      background: -webkit-linear-gradient(left, #000000 0%, #565656 52%, #000000 100%);
-      background: linear-gradient(to right, #000000 0%, #565656 52%, #000000 100%);
-    }
-
-    .card-text {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .arriba {
-      transform: scale(1.2);
-    }
-
-    .abajo {
-      transform: scale(0.8);
-    }
-
-    .borde {
-      border: 1px solid red;
-    }
-
-    #cont-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-bottom: 2vw;
-    }
-
-    #boton-ocul {
-      background-color: rgb(99, 99, 226);
-      color: aliceblue;
-    }
-
-    .oculto {
-      opacity:0;
-    }
-
-    #contenedor-carta {
-      transition: all 0.7s;
-    }
-    
-
-
-  </style>
+  <link rel="stylesheet" href="css/style.css">
+  
 </head>
 
 <body>
@@ -111,7 +37,7 @@
   </div>
 
   <div id="cont-btn">
-    <button id="boton-ocul" onclick="ocultarCiudad()">Ocultar</button>
+    <button id="boton-ocul" onclick="alternarCard2()">Modificar</button>
   </div>
 
   <div class="container text-center oculto" id="contenedor-carta">
@@ -123,14 +49,32 @@
         <p class="card-text" id="atractivos">Atractivos: </p>
       </div>
     </div>
+    <div id="card-modificacion" class="card-2 card-oculto">
+      <label for="nvaImagen">Seleccione una nueva imagen:</label>
+      <input type="file" id="nvaImagen" accept="image/png, image/jpeg">
+
+      <input id="input-titulo" type="text" placeholder="Inserte Titulo" style="width: 413px;"></input>
+
+      <textarea id="input-texto" name="textarea" rows="4" cols="50" placeholder="Escriba una descripción"></textarea>
+      <button onclick="cambiarTextos()">Enviar</button>
+    </div>
+    
+
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+<script src="js/lib/jquery-3.6.3.min.js"></script>
+<script src="js/db.js"></script>
+<script src="js/main.js"></script>
+
 </body>
 
 
-<script src="main.js"></script>
 
 
 <script>

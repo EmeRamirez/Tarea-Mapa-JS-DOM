@@ -14,6 +14,7 @@
 .container {
   display: flex;
   justify-content: center;
+  gap: 4vw;
 
 }
 
@@ -29,6 +30,27 @@
   background: -moz-linear-gradient(left, #000000 0%, #565656 52%, #000000 100%);
   background: -webkit-linear-gradient(left, #000000 0%, #565656 52%, #000000 100%);
   background: linear-gradient(to right, #000000 0%, #565656 52%, #000000 100%);
+}
+
+.card-2 {
+  display: flex;
+  color: antiquewhite;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vw;
+  align-items: center;
+  width: 35vw;
+  border-color: black;
+  border-radius: 5px;
+  background: #000000;
+  background: -moz-linear-gradient(left, #000000 0%, #565656 52%, #000000 100%);
+  background: -webkit-linear-gradient(left, #000000 0%, #565656 52%, #000000 100%);
+  background: linear-gradient(to right, #000000 0%, #565656 52%, #000000 100%);
+}
+
+.card-body-2 {
+  display: flex;
+  align-items: flex-end;
 }
 
 .card-text {
@@ -71,3 +93,7 @@
   transition: all 0.7s;
 }
 
+/* Aquí se oculta la card-2 con la clase */ 
+.card-oculto {
+  display: none;
+}
