@@ -14,26 +14,25 @@
 <body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
   <div class="text-center">
-    <map name="mapa" class="figuras">
-      <area shape="circle" coords="40,100,15" href="#" onmouseover="mostrarCiudad(0)" />
-      <area shape="circle" coords="90,100,15" href="#" onmouseover="mostrarCiudad(1)" />
-      <area shape="rectangle" coords="150,50,230,130" href="#" onmouseover="mostrarCiudad(2)" />
-      <area shape="rectangle" coords="270,50,390,150" href="#" onmouseover="mostrarCiudad(3)" />
-      <area shape="rectangle" coords="400,100,490,160" href="#" onmouseover="mostrarCiudad(4)" />
-      <area shape="circle" coords="510,140,20" href="#" onmouseover="mostrarCiudad(5)" />
-      <area shape="circle" coords="550,130,20" href="#" onmouseover="mostrarCiudad(6)" />
-      <area shape="circle" coords="580,140,20" href="#" onmouseover="mostrarCiudad(7)" />
-      <area shape="circle" coords="620,160,20" href="#" onmouseover="mostrarCiudad(8)" />
-      <area shape="circle" coords="660,170,15" href="#" onmouseover="mostrarCiudad(9)" />
-      <area shape="circle" coords="695,170,15" href="#" onmouseover="mostrarCiudad(10)" />
-      <area shape="circle" coords="750,180,30" href="#" onmouseover="mostrarCiudad(11)" />
-      <area shape="circle" coords="800,190,15" href="#" onmouseover="mostrarCiudad(12)" />
-      <area shape="rectangle" coords="825,175,925,215" href="#" onmouseover="mostrarCiudad(13)" />
-      <area shape="rectangle" coords="950,175,1155,255" href="#" onmouseover="mostrarCiudad(14)" />
-      <area shape="rectangle" coords="1180,125,1450,255" href="#" onmouseover="mostrarCiudad(15)" />
-    </map>
-    </map>
-    <img src="https://aprotur.cl/wp-content/uploads/2020/07/sur.png" usemap="#mapa">
+    <map name="mapa">
+      <area onmouseover="mostrarCiudad(0)" href="#" coords="15,140,42,168" shape="rect">
+      <area onmouseover="mostrarCiudad(1)" href="#" coords="43,129,86,163" shape="rect">
+      <area onmouseover="mostrarCiudad(2)" href="#" coords="89,126,116,119,118,105,138,112,158,129,175,171,92,162" shape="poly">
+      <area onmouseover="mostrarCiudad(3)" href="#" coords="164,135,179,168,236,182,241,159,198,128" shape="poly">
+      <area onmouseover="mostrarCiudad(4)" href="#" coords="245,157,292,188" shape="rect">
+      <area onmouseover="mostrarCiudad(5)" href="#" coords="298,159,297,180,332,186,311,172,313,155" shape="poly">
+      <area onmouseover="mostrarCiudad(6)" href="#" coords="317,151,314,168,332,181,335,174,331,164,337,155" shape="poly">
+      <area onmouseover="mostrarCiudad(7)" href="#" coords="337,158,351,162,347,189,334,188" shape="poly">
+      <area onmouseover="mostrarCiudad(8)" href="#" coords="357,164,346,193,369,198,383,166" shape="poly">
+      <area onmouseover="mostrarCiudad(9)" href="#" coords="382,175,374,201,382,202,395,192,395,174" shape="poly">
+      <area onmouseover="mostrarCiudad(10)" href="#" coords="397,176,415,174,416,185,407,204,422,213,400,215,385,204,397,190" shape="poly">
+      <area onmouseover="mostrarCiudad(11)" href="#" coords="418,172,443,179,440,203,424,211,412,202,421,182" shape="poly">
+      <area onmouseover="mostrarCiudad(12)" href="#" coords="446,181,463,183,464,198,457,212,442,203" shape="poly">
+      <area onmouseover="mostrarCiudad(13)" href="#" coords="467,184,531,179,522,216,460,214,467,196" shape="poly">
+      <area onmouseover="mostrarCiudad(14)" href="#" coords="533,177,526,218,592,235,635,230,631,213,644,196,584,174" shape="poly">
+      <area onmouseover="mostrarCiudad(15)" href="#" coords="649,196,636,213,642,232,718,213,754,173,776,118,758,118,748,138,701,137,693,181,668,185,669,198" shape="poly">
+  </map>
+    <img src="./img/mapahorch.png"  usemap="#mapa">
   </div>
 
   <div id="cont-btn">
